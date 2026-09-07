@@ -23,7 +23,7 @@ const Menu = () => {
 
 
       {open && (
-        <div className="h-[94vh] z-50 w-full left-0 top-12 absolute border flex flex-col justify-center gap-18 items-center">
+        <div className="h-[94vh] z-50 w-full left-0 top-12 absolute border flex flex-col justify-center gap-18 bg-fuchsia-50 items-center">
           {items.map(item=>(
             <Link className="text-black text-2xl px-3 py-1 hover:text-green-800" href={item.url} key={item.id}>{item.title}</Link>
           ))}
