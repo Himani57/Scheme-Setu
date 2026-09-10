@@ -22,8 +22,8 @@ const Navbar = () => {
           <Link className="font-medium text-md hover:text-green-600" href='/about'>About</Link>
         </div>
         <div className="hidden sm:flex sm:gap-2">
-          <button className="border px-2 rounded-lg ">Login</button>
-          <button className="border bg-green-700 text-white px-2 rounded-lg py-1.5">Get Started</button>
+          <Link href="/login" className="border px-3 pt-1.5 rounded-lg ">Login</Link>
+          <Link href="/signup" className="border bg-green-700 text-white px-2 rounded-lg py-1.5">Get Started</Link>
         </div>
         <div className="sm:hidden">
             <Menu />
