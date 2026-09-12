@@ -1,7 +1,8 @@
 import React from "react";
 import { FaMagnifyingGlass, FaArrowRightLong } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa";
-import Detail from "@/components/Detail";
+import Detail from "@/components/Home/Detail";
+import Link from "next/link"
 
 const Hero = () => {
   return (
@@ -15,19 +16,19 @@ const Hero = () => {
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold text-green-800">Made For You.</h1>
         </div>
         <p className="text-sm font-light">
-          Discover government schemes you're eligible for with personalized
+          Discover government schemes youre eligible for with personalized
           recommendation powered by Ai.
         </p>
         <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
-          <div className="flex gap-1.5 bg-green-200 w-fit sm:py-2.5 sm:px-2.5 border px-2 py-1.5 rounded-2xl items-center">
+          <Link href="/signup" className="flex gap-1.5 bg-green-200 w-fit sm:py-2.5 sm:px-2.5 border px-2 py-1.5 rounded-2xl items-center">
             <FaMagnifyingGlass />
             <span className="text-sm">Explore Schemes</span>
             <FaArrowRightLong />
-          </div>
-          <div className="flex gap-1.5 bg-green-200 w-fit sm:py-2.5 sm:px-2.5 border px-2 py-1.5 rounded-2xl items-center">
+          </Link>
+          <Link href="/signup" className="flex gap-1.5 bg-green-200 w-fit sm:py-2.5 sm:px-2.5 border px-2 py-1.5 rounded-2xl items-center">
             <FaRegStar />
             <span className="text-sm">Check Eligibility</span>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="">

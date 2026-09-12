@@ -1,4 +1,4 @@
-import Login from "@/components/Login"
+import Login from "@/components/Auth/Login"
 import { FaBolt, FaWandMagicSparkles } from "react-icons/fa6";
 
 const features = [
