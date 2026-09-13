@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 const XlNavabr = () => {
   const [word, setWord] = useState("");
   return (
-    <div className="border border-gray-400 h-10 flex items-center gap-3 p-3 rounded-3xl">
+    <div className="border border-gray-400 h-10 w-full flex items-center gap-3 p-3 rounded-3xl">
       <Search className="text-gray-600 shrink-0" size={20} />
       <input
         value={word}

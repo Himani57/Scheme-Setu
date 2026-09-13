@@ -16,7 +16,7 @@ import {
 
 const Form = () => {
   return (
-    <div className="flex flex-col bg-white rounded-2xl p-2 shadow-sm border border-black/5 w-full">
+    <div className="flex flex-col bg-white p-2 shadow-sm  w-full">
       <div className="flex items-center gap-2 mb-1">
         <User size={18} className="text-[#0F3D2E]" />
         <h1 className="font-semibold text-[#0F3D2E] text-base">

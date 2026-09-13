@@ -7,13 +7,13 @@ import XlNavbar from '@/components/Dashboard/XlNavabr';
 
 const Dashboard = () => {
   return (
-    <div className="h-screen w-full sm:mx-auto lg:w-full p-2 sm:w-[70%] ">
+    <div className="h-screen w-full sm:mx-auto lg:w-full sm:w-[70%] ">
         <div className="h-full lg:flex xl:gap-2.5 lg:gap-1">
-          <div className="hidden lg:flex xl:w-[20%] lg:w-[25%]">
+          <div className="hidden lg:flex lg:h-screen xl:w-[20%] lg:w-[25%]">
             <Sidebar />
           </div>
-          <div className="lg:flex-1">
-            <div className="hidden xl:flex xl:flex-col">
+          <div className="lg:flex-1 lg:p-2">
+            <div className="hidden lg:mt-2 lg:w-full lg:flex xl:flex">
               <XlNavbar />
             </div>
             <div className="lg:hidden xl:hidden">

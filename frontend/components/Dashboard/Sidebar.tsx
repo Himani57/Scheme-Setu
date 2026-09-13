@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Home,
   Search,
@@ -14,21 +15,26 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Dashboard", icon: Home },
-  { label: "Explore Schemes", icon: Search },
-  { label: "My Recommendations", icon: Star },
-  { label: "Saved Schemes", icon: Bookmark },
-  { label: "Check Eligibility", icon: ShieldCheck },
-  { label: "AI Assistant", icon: MessageCircle },
-  { label: "My Profile", icon: User },
-  { label: "Settings", icon: Settings },
+  { label: "Dashboard", icon: Home, path: "/dashboard" },
+  { label: "Explore Schemes", icon: Search, path: "/schemes" },
+  { label: "My Recommendations", icon: Star, path: "/recommendations" },
+  { label: "Saved Schemes", icon: Bookmark, path: "/saved" },
+  { label: "Check Eligibility", icon: ShieldCheck, path: "/eligibility" },
+  { label: "AI Assistant", icon: MessageCircle, path: "/assistant" },
+  { label: "My Profile", icon: User, path: "/profile" },
+  { label: "Settings", icon: Settings, path: "/settings" },
 ];
 
 const Sidebar = () => {
-  const [active, setActive] = useState("Dashboard");
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleClick = (item) => {
+    router.push(item.path);
+  };
 
   return (
-    <aside className="hidden lg:rounded-lg lg:flex lg:w-full lg:flex-col lg:justify-between h-full bg-[#0d3b31] text-white px-5 py-6 relative overflow-hidden">
+    <aside className="hidden lg:flex lg:h-screen lg:w-full lg:flex-col lg:justify-between h-full bg-[#0d3b31] text-white px-5 py-6 relative overflow-hidden">
       <div className="relative z-10 flex flex-col gap-8">
         <div className="flex items-center gap-3">
           <div>
@@ -44,13 +50,14 @@ const Sidebar = () => {
         </div>
 
         <nav className="flex flex-col gap-1">
-          {navItems.map(({ label, icon: Icon }) => {
-            const isActive = active === label;
+          {navItems.map((item) => {
+            const { label, icon: Icon, path } = item;
+            const isActive = pathname === path;
             return (
               <button
                 key={label}
                 type="button"
-                onClick={() => setActive(label)}
+                onClick={() => handleClick(item)}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors text-left ${
                   isActive
                     ? "border border-emerald-400 text-emerald-400"
