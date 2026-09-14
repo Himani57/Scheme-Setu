@@ -18,7 +18,7 @@ const navItems = [
   { label: "Dashboard", icon: Home, path: "/dashboard" },
   { label: "Explore Schemes", icon: Search, path: "/schemes" },
   { label: "My Recommendations", icon: Star, path: "/recommendations" },
-  { label: "Saved Schemes", icon: Bookmark, path: "/saved" },
+  { label: "Saved Schemes", icon: Bookmark, path: "/savedScheme" },
   { label: "Check Eligibility", icon: ShieldCheck, path: "/eligibility" },
   { label: "AI Assistant", icon: MessageCircle, path: "/assistant" },
   { label: "My Profile", icon: User, path: "/profile" },

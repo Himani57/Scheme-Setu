@@ -11,7 +11,7 @@ const HeroBanner = ({ name = "Himani" }) => (
       <h2 className="text-2xl font-bold text-gray-900 leading-tight">
         My Recommendations
       </h2>
-      <p className="text-sm text-gray-600 leading-snug mt-1">
+      <p className="text-sm text-gray-600">
         Personalized schemes based on your profile and eligibility.
       </p>
     </div>
