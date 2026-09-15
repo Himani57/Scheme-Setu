@@ -14,6 +14,7 @@ import {
   Wallet,
   BadgeCheck,
 } from "lucide-react";
+import Link from "next/link";
 
 // Color theme config per category
 const categoryStyles = {
@@ -111,7 +112,6 @@ const SchemeCard = ({ scheme }) => {
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-3 shadow-sm">
-      {/* Top row: icon, title, category, chevron */}
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-start gap-3">
           <div className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center ${style.bg}`}>
@@ -130,11 +130,8 @@ const SchemeCard = ({ scheme }) => {
         </div>
         <ChevronRight size={18} className="text-gray-400 shrink-0 mt-1" />
       </div>
-
-      {/* Description */}
       <p className="text-sm text-gray-500 leading-snug">{scheme.description}</p>
 
-      {/* Footer: meta info + view details */}
       <div className="flex items-center justify-between flex-wrap gap-2 pt-1">
         <div className="flex items-center gap-4 flex-wrap">
           {scheme.meta.map(({ icon: MetaIcon, text }, idx) => (
@@ -144,14 +141,19 @@ const SchemeCard = ({ scheme }) => {
             </div>
           ))}
         </div>
-
-        <button
+        <div className="w-full flex items-center justify-between ">
+          <button
           type="button"
           className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full shrink-0 ${style.btnBg} ${style.btnText}`}
         >
           View Details
           <ArrowRight size={14} />
         </button>
+        <Link href="/check-eligibility" className="text-sm bg-emerald-100 rounded-3xl py-1 px-2">
+          Check-Eligibility -
+        </Link>
+        </div>
+       
       </div>
     </div>
   );
